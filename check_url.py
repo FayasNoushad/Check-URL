@@ -1,4 +1,5 @@
 import requests
+import domain_extract
 
 
 def check(url, test=False):
