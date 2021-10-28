@@ -13,7 +13,11 @@ def check(url, test=False):
         return False 
     if test:
         try:
-            requests.get(url)
+            is_ok = requests.get(url).ok
+            if is_ok:
+                return True
+            else:
+                return False
         except:
             return False
     return True
