@@ -11,15 +11,19 @@ def requirements(file="requirements.txt") -> list:
         return []
 
 
-file = pathlib.Path(__file__).parent
+def readme(file="README.md"):
+    if os.path.isfile(file):
+        with open(file, encoding="utf8") as r:
+            return r.read()
+    else:
+        return ""
 
-README = (file / "README.md").read_text()
 
 setup(
     name="Check-URL",
-    version="1.0.0",
+    version="1.0.1",
     author="FayasNoushad",
-    long_description=README,
+    long_description=readme(),
     long_description_content_type="text/markdown",
     description="A url checker python module",
     license="MIT",
