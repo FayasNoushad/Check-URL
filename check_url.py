@@ -3,7 +3,7 @@ import domain_extract
 
 
 def check(url, test=False):
-    if url.startswith("http://") or url startswith("https://"):
+    if not url.startswith("http://") or not url.startswith("https://"):
         return False 
     try:
         domain = domain_extract.domain(url)
