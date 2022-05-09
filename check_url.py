@@ -8,7 +8,7 @@ def check(url, test=False):
     try:
         domain = domain_extract.domain(url)
         if not domain or not "." in domain:
-            return False, 2
+            return False
     except:
         return False
     if test:

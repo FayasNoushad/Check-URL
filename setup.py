@@ -20,7 +20,7 @@ def readme(file="README.md"):
 
 setuptools.setup(
     name="Check-URL",
-    version="1.0.5",
+    version="1.0.6",
     description="URL Checker",
     long_description=readme(),
     long_description_content_type="text/markdown",
